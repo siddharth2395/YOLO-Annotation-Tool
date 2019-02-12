@@ -4,7 +4,7 @@ import os
 from os import walk, getcwd
 from PIL import Image
 
-classes = ["001","002","003","004","005","006"]
+classes = ["001","002","003"]
 
 def convert(size, box):
     dw = 1./size[0]
@@ -23,10 +23,10 @@ def convert(size, box):
 """-------------------------------------------------------------------""" 
 
 """ Configure Paths"""   
-mypath = "./Labels/006/"
+mypath = "./Labels/003/"
 outpath = "./Labels/output/"
 
-cls = "006"
+cls = "003"
 if cls not in classes:
     exit(0)
 cls_id = classes.index(cls)
@@ -38,8 +38,8 @@ list_file = open('%s/%s_list.txt'%(wd, cls), 'w')
 txt_name_list = []
 for (dirpath, dirnames, filenames) in walk(mypath):
     txt_name_list.extend(filenames)
-    break
-# print(txt_name_list)
+    # break
+print(txt_name_list)
 
 """ Process """
 for txt_name in txt_name_list:
