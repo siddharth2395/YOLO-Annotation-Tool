@@ -20,7 +20,7 @@ pt2 = [x2, y2]
 pt3 = [x3, y3]
 pts = np.array([pt1, pt2, pt3], np.int32)
 img = cv2.polylines(img, [pts], True, (0, 0, 0), 3)
-cv2.imwrite('./Images/003/triangle.jpg', img)
+cv2.imwrite('../Images/003/triangle.jpg', img)
 
 
 def get_cordinates_change():
@@ -89,4 +89,4 @@ for i in range(100):
     print(i, (r, g, b))
     th = get_cordinates_change_th()
     image = rotation(image, th, bg_r, bg_g, bg_r)
-    cv2.imwrite('./Images/003/triangle{}.jpg'.format(i), image)
+    cv2.imwrite('../Images/003/triangle{}.jpg'.format(i), image)
