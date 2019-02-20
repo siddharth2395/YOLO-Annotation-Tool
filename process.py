@@ -8,7 +8,7 @@ print(current_dir)
 current_dir = 'D:/experiments/YOLO-Annotation-Tool/multi-image-train'
 
 # Percentage of images to be used for the test set
-percentage_test = 10
+percentage_test = 25
 
 # Create and/or truncate train.txt and test.txt
 file_train = open('train.txt', 'w')
