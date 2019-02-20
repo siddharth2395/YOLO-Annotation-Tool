@@ -44,8 +44,10 @@ for i in range(1000):
         g = random.randint(128, 256)
         b = random.randint(128, 256)
     filled = random.randint(0, 1)
-    img = cv2.rectangle(img, (x1 + get_cordinates_change(), y1 + get_cordinates_change()),
-                        (x2 + get_cordinates_change(), y2 + get_cordinates_change()), (r, g, b),
+    change_1 = get_cordinates_change()
+    change_2 = get_cordinates_change()
+    img = cv2.rectangle(img, (x1 + change_1, y1 + change_1),
+                        (x2 + change_2, y2 + change_2), (r, g, b),
                         -1 if filled == 1 else 3)
     print(i, (r, g, b))
     cv2.imwrite('./Images/001/square{}.jpg'.format(i), img)

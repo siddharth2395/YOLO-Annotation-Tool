@@ -23,10 +23,10 @@ def convert(size, box):
 """-------------------------------------------------------------------""" 
 
 """ Configure Paths"""   
-mypath = "./Labels/003/"
+mypath = "./Labels/002/"
 outpath = "./Labels/output/"
 
-cls = "003"
+cls = "002"
 if cls not in classes:
     exit(0)
 cls_id = classes.index(cls)
